@@ -9,7 +9,13 @@
     
     <style>
     
-        ul {
+       * {
+        color: #a3a3a3;
+        font-family:Arial, Helvetica, sans-serif;
+        text-decoration: none;
+       }
+        
+        .ul-topnav {
             list-style-type: none;
             position: fixed;
             top: 0;
@@ -19,7 +25,7 @@
 
         }
 
-        li {
+        .li-topnav {
             float: right;
             margin: 10px; 
         }
@@ -29,6 +35,11 @@
             padding: 5px;
         }
 
+        a:hover {
+            color: #000000;
+            text-decoration: underline;
+        }
+
         .googlelogo {
             position: static;
             display: block;
@@ -36,17 +47,83 @@
             margin-right: auto;
             margin-top: 200px; 
         }
+
+        #container {
+            display: flex;
+            margin-top: 25px;
+            flex-direction: column;
+            justify-content: center;
+            
+
+        }
+
+        .ul-footer {
+            list-style-type:none;
+            position: fixed; 
+            bottom: 0;
+            width: 99%;
+            background-color: #f2f2f2;
+            color: #8e8e8e; 
+            padding-left: 0px;
+            padding-bottom: 0px;
+            
+            
+        }
+
+        .li-footer {
+            float: left;
+            margin: 10px; 
+        }
+
+
     
         .textbox {
-            width: 100%;
-            padding: 12px 20px; 
-            margin: 8px 0; 
+            width: 450px;
+            padding: 12px 50px; 
+            margin: 0 auto; 
             box-sizing: border-box;
-            border-radius: 24px;
+            border-radius: 20px;
             background-color: white;
-            
-           
+            border-color: #efefef;
+            background-image: url('search-icon.jpg'), url('Google-microphone.png'); 
+            background-size: contain, 18px 25px; 
+            background-repeat: no-repeat, no-repeat; 
+            background-position: left, right 5px top 5px; 
+            align-self: center;
         }
+
+        .textbox:hover {
+            box-shadow: 3px 3px #f3f3f3;
+        }
+
+        .buttons {
+            
+            display:block;
+            margin-right: 50px; 
+            justify-content: center;
+            border-radius: 4px;
+            font-family: arial,sans-serif;
+            font-size: 14px;
+            margin-right: 11px;
+            padding: 20px;
+            line-height: 27px;
+            height: 36px;
+            min-width: 54px;
+            text-align: center;
+            color: #222222;
+
+
+        }
+
+        button {
+            padding-top: 10px !important;
+            padding-bottom: 10px !important;
+            margin-left: 10px;
+            margin-right: 10px;
+            border: none;
+            border-radius: 4px;
+        }
+       
     
     </style>   
 
@@ -54,16 +131,37 @@
 
 <header>
     <nav id="top-nav"> 
-        <ul>
-            <li><a href="#Profile">Profile</a></li>
-            <li><a href="#Apps">Apps</a></li>
-            <li><a href="#Gmail">Gmail</a></li>
-            <li><a href="#Images">Images</a></li>
+        <ul class="ul-topnav">
+            <li class="li-topnav"><a href="#Profile">Profile</a></li>
+            <li class="li-topnav"><a href="#Apps">Apps</a></li>
+            <li class="li-topnav"><a href="#Gmail">Gmail</a></li>
+            <li class="li-topnav"><a href="#Images">Images</a></li>
         </ul>
     </nav> 
 </header>
 
 <body>
     <img class="googlelogo" src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" alt="google logo">
-    <input class="textbox"></image>
+    <div id="container">
+        <input class="textbox"></image>
+        
+        <div class="buttons">
+            <button class="search">Google Search</button>
+            <button class="lucky">I'm feeling Lucky</button>
+        </div>
+        
+    </div>
+
 </body>
+<footer>
+    <nav id="footer">
+        <ul class="ul-footer">
+            <li class="li-footer"><a href="#advertising">Advertising</a></li>
+            <li class="li-footer"><a href="#business">Business</a></li>
+            <li class="li-footer"><a href="#About">About</a></li>
+            <li class="li-footer"><a href="#How">How Search Works</a></li>
+            <li style="float: right"><a href="#Privacy">Privacy</a></li>
+        </ul>
+    
+</nav>
+</footer>
